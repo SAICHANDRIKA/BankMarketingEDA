@@ -24,13 +24,13 @@ matplotlib.rcParams['figure.figsize'] = (8,5)
 gs = gridspec.GridSpec(2, 2)
 pd.options.mode.chained_assignment = None
 
-import os
-from google.colab import drive
-drive.mount("/content/drive/", force_remount=True)
+# import os
+# from google.colab import drive
+# drive.mount("/content/drive/", force_remount=True)
 
 """**Data Loading**"""
 
-with open("/content/drive/MyDrive/DataCleaning/Data/bank-additional/bank-additional-full.csv",'r', encoding="ISO-8859-1") as reader:
+with open("BankMarketingEDA/bank-additional.csv",'r', encoding="ISO-8859-1") as reader:
     # Making a list of missing value types
     missing_values = ["n/a", "na", "-"]
     dfb = pd.read_csv(reader,na_values = missing_values,sep=';')
